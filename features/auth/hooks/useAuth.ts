@@ -12,6 +12,7 @@ export function useAuth() {
     queryKey: ["me"],
     queryFn: authService.me,
     retry: false,
+     staleTime: 1000 * 60 * 5, // 5 minutes
   });
 
   return {
